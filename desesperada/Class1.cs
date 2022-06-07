@@ -40,6 +40,7 @@ namespace desesperada
             set { tempMin = value; }
         }
 
+        public const string ListaVaciaNo = "La lista no puede esta vacia";
         /// <summary>
         /// La siguiente función obtiene la temperatura promedio de cada uno de los días que se pasan como parámetro
         /// </summary>
@@ -61,7 +62,7 @@ namespace desesperada
             //
             if (observacionDia1.Count <= 0)
             {
-                throw new Exception("No puede estar vacio la observacion del dia 1");  // Tenemos que tener al menos una observación
+                throw new Exception(ListaVaciaNo);  // Tenemos que tener al menos una observación
             }
 
             for (i = 0; i < observacionDia1.Count; i++)
@@ -84,7 +85,7 @@ namespace desesperada
 
             if (observacionDia2.Count <= 0)
             {
-                throw new Exception("No puede estar vacio la observacion del dia 2"); // Tenemos que tener al menos una observación
+                throw new Exception( ListaVaciaNo); // Tenemos que tener al menos una observación
             }
 
             for (i = 0; i < observacionDia2.Count; i++)
@@ -107,7 +108,7 @@ namespace desesperada
 
             if (observacionDia3.Count <= 0)
             {
-                throw new Exception("No puede estar vacio la observacion del dia 3");  // Tenemos que tener al menos una observación
+                throw new Exception(ListaVaciaNo);  // Tenemos que tener al menos una observación
             }
 
             for (i = 0; i < observacionDia3.Count; i++)
