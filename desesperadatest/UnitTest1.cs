@@ -86,7 +86,30 @@ namespace desesperadatest
 
             miPrediccionPrueba.PrediccionTemperatura(dia1, dia2, dia3);
         }
+        [TestMethod]
+        public void PruebaTrCa()
+        {
+            Prediccion miPrediccionPrueba = new Prediccion();
+
+            List<double> dia1 = new List<double>(),
+                            dia2 = new List<double>(),
+                            dia3 = new List<double>();
+            dia1.Add(12.5); dia1.Add(16.5); dia1.Add(21); dia1.Add(17); dia1.Add(15);
+            dia2.Add(13); dia2.Add(15); dia2.Add(19.5); dia2.Add(16.5); dia2.Add(14);
+            try
+            {
+                miPrediccionPrueba.PrediccionTemperatura(dia1, dia2, dia3);
+            }
+            catch(Exception e)
+            {
+                StringAssert.Contains(e.Message, Prediccion.ListaVaciaNo);
+            }
+   
+        }
+
 
     }
+
 }
+
 
